@@ -2,6 +2,7 @@ import App from '../App'
 
 // 懒加载组件,food为chunkName
 const food = r => require.ensure([], () => r(require('../page/food/food'), 'food'))
+const login = r => require.ensure([], () => r(require('../page/login/login'), 'food'))
 
 export default [{
   path: '/',
@@ -15,6 +16,9 @@ export default [{
     {
       path: '/food',
       component: food
+    },
+    {path:'/login',
+    component:login
     }
   ]
 }]
