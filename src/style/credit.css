@@ -1,0 +1,87 @@
+html,body{
+  background-color: #f5f8fa;
+}
+input{
+  outline:none;
+}
+.credit-wrap{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  height:100%;
+  width:100%;
+}
+.credit{
+  background-color: #fff;
+  border:1px solid #e4ecf3;
+  border-radius: 25px;
+}
+
+.credit .title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top:2rem;
+  padding-bottom:2rem;
+}
+.credit .btn-box{
+  padding-top:2rem;
+  padding-bottom:1rem;
+}
+.btn-top{
+  padding-top:2rem;
+}
+.btn-bottom{
+  padding-bottom:1rem;
+}
+.red{
+  color:var(--red);
+}
+.br-primary{
+  border-radius: 1.5rem;
+}
+/*右上角三角*/
+.bookmark{
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 1rem;
+}
+.triangle-topright {
+  float: right;
+  width: 0;
+  height: 0;
+  border-top-right-radius: 25px;
+  border-top: 60px solid #28a745;
+  border-left: 60px solid #fff;
+  cursor:pointer;
+}
+.bookmark .word{
+  float: right;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 0.8rem;
+  display: block;
+  transform: rotate(-45deg);
+  font-weight: bold;
+  line-height: 1rem;
+  cursor:pointer;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  color:#fff;
+}
+
+#creditPositive,#creditNegative{
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+#creditNegative{
+  display: none;
+}
