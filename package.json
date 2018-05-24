@@ -14,9 +14,11 @@
     "better-scroll": "^0.1.15",
     "fastclick": "^1.0.6",
     "iscroll": "^5.2.0",
+    "jquery": "^3.3.1",
     "showdown": "^1.6.4",
     "vee-validate": "^2.0.9",
     "vue": "^2.1.0",
+    "vue-resource": "^1.5.1",
     "vue-router": "^2.1.1",
     "vuex": "^2.0.0"
   },
