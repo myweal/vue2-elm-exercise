@@ -3,6 +3,10 @@ import VueRouter from 'vue-router'
 import routes from './router/router'
 import Alert from 'src/components/common/Alert'
 
+
+// 处理请求头，与公共报错处理
+require('src/config/http-config')
+
 // 定义路由
 Vue.use(VueRouter)
 
