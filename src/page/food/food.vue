@@ -1,6 +1,5 @@
 <template>
   <div>
-    test
     <div v-for="obj in foodList">
       {{obj.name}}
     </div>

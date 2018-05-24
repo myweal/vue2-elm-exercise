@@ -1,8 +1,10 @@
 import App from '../App'
 
 // 懒加载组件,food为chunkName
-const food = r => require.ensure([], () => r(require('../page/food/food'), 'food'))
-const login = r => require.ensure([], () => r(require('../page/login/login'), 'food'))
+const food = r => require.ensure([], () => r(require('../page/food/food'), 'main'))
+const login = r => require.ensure([], () => r(require('../page/login/login'), 'main'))
+const welcome = r => require.ensure([], () => r(require('../page/credit/welcome'), 'main'))
+const main = r => require.ensure([], () => r(require('../page/credit/main'), 'main'))
 
 export default [{
   path: '/',
@@ -10,7 +12,7 @@ export default [{
   children: [
     {
       path: '',
-      redirect: '/food'
+      redirect: '/welcome'
     },
     // 特色商铺列表页
     {
@@ -19,6 +21,12 @@ export default [{
     },
     {path:'/login',
     component:login
+    },
+    {path:'/welcome',
+      component:welcome
+    },
+    {path:'/main',
+      component:main
     }
   ]
 }]
