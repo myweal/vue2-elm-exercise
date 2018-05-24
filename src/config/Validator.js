@@ -9,8 +9,9 @@ VeeValidate.Validator.localize({
   zh_CN: {
     messages: {
       required: function (name) { return name + '不能为空' },
-      alpha:function (name) { return name+"必须是字母数字下划线"},
+      alpha_dash:function (name) { return name+"必须是字母数字下划线"},
       numeric:function (name) { return name + '必须是数字' },
+      email:function (name) { return name + '必须是正确格式的邮箱' }
     }
   }
 })
