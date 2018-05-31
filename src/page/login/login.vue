@@ -24,8 +24,6 @@
   </div>
 </template>
 <script>
-  // "Data": "dOvpuXpaMkJ+ShFNq2cGjhTMwZoJdRSS9x/0aRd2Ivu0svl3rOva19Ep4AkwITdDQ1yxevS31foLe6BvmR1ondR2mrCBbA5tCL+yFK2OheOX8EkMwaoiBnYFwvWLUdCkas7HwpbuLSKPgO7Shc1qYDd0mh2eqDo+j3F2rduYY8oD0HQVx9EXbC/EDqtLHsiMUzZLQTY9NK7dlhZDdvBo6SSuXrlrupkyTEkuYwzyva0="
-  //
   export default {
     data () {
       return {
@@ -37,6 +35,7 @@
     },
     methods: {
       subForm: function () {
+        let vm = this;
         // 获得报错的集合
         let items = this.errors.items;
         let length = items.length;
@@ -46,11 +45,22 @@
             this.alert(temp.msg)
             return false
         }
-        // 向后端发送登录请求
+        /*// 向后端发送登录请求
         this.$http.post("/login.json",this.user).then(response=>{
           // 成功后跳转到列表页面
           this.goto('/list')
-        });
+        });*/
+
+        vm.$axios.post('/login.json',this.user)
+          .then(function (response) {
+            debugger
+            // 成功后跳转到列表页面
+            vm.goto('/list')
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
       }
     }
 
