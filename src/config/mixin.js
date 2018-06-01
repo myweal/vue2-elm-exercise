@@ -11,10 +11,10 @@ Vue.mixin({
         options.message = option
         options.showFlag = true
       }
-      this.$root.alertOptions = options
+      this.$message(options);
     },
     goto: function (state) {
       this.$router.push(state)
     }
   }
-})
+});

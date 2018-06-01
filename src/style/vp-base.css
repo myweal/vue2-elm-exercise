@@ -1,0 +1,181 @@
+::-moz-placeholder {
+    font-size: 14px;
+    opacity: 1;
+    color: #ccc;
+
+}
+:-ms-input-placeholder{
+    font-size: 14px;
+    color: #ccc;
+}
+::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #ccc;
+}
+a{
+    color:#3289f4;
+}
+a:hover, a:focus {
+    color:#3289f4;
+    text-decoration: none;
+}
+a.btn:active, a.btn.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+a.btn:focus, a.btn:active:focus, a.btn.active:focus, a.btn.focus, a.btn:active.focus, a.btn.active.focus {
+    outline: 0;
+}
+.btn:hover, .btn:focus, .btn.focus{
+    outline:0;
+}
+.btn-info:active:hover, .btn-info.active:hover, .open > .dropdown-toggle.btn-info:hover, .btn-info:active:focus, .btn-info.active:focus, .open > .dropdown-toggle.btn-info:focus, .btn-info:active.focus, .btn-info.active.focus, .open > .dropdown-toggle.btn-info.focus{
+    outline:0;
+}
+/*标题栏样式*/
+.mapp_header_wrap{
+    position:fixed;width:100%;top:0;z-index:2;
+}
+.mapp_header_wrap .top{
+    background: #1369DC;
+    color: #fff;
+    height:19px;margin:0;
+}
+.mapp_header_wrap .top2 {
+    background: #fff;
+    color: #000;
+    border-bottom: 1px solid #E9E9E9;
+    margin:0;
+}
+.mapp_header {
+    overflow: hidden;
+    height: 45px;
+    line-height: 45px;
+    background: #eee;
+}
+.mapp_header .header_left {
+    float: left;
+    width: 15%;
+}
+.mapp_header .header_left img{
+    margin-left: 16px;
+}
+.mapp_header .header_title {
+    float: left;
+    width: 70%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight:400;
+    font-size:19px;
+}
+.mapp_header .header_right{
+    position: absolute;
+    right: 20px;
+    font-size: 16px;
+}
+.header_left_img{height: 15px;}
+.mapp_view{
+    padding-top: 55px;
+}
+/*标题栏样式结束*/
+
+.container-wrap{
+    padding-top:10px;
+}
+.btn-wrap{
+    margin-bottom: 35px;
+    height: 34px;
+}
+
+/***灯 开始*/
+.red-dot,.green-dot,.yellow-dot{
+    display: block;
+    width:16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: yellow;
+    margin: 0 auto;
+}
+.red-dot{
+    background-color: red;
+}
+.green-dot{
+    background-color: green;
+}
+
+.yellow-dot{
+    background-color: yellow;
+}
+/***灯 结束*/
+
+/**健康度管理列表 start*/
+/*.rowline{
+    background: 95% center  no-repeat url(img/bg_jt.png) ;
+    background-size: 12px;
+}
+.rowline ,.health-title{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    border-bottom: 1px solid #efefef;
+}
+.rowline > div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.rowline:active,.rowline:hover,.rowline:active:hover{
+    !*background-color: #efefef;*!
+}*/
+.omitted{
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.health-title{
+    border-top: 1px solid #efefef;
+    margin-top:10px;
+}
+.health-title .col-xs-6,.health-title .col-6{
+    padding:5px;
+    background-color: #e1e1e8;
+}
+.health-title .col-xs-6:first-child,.health-title .col-6:first-child{
+    border-right: 1px solid #efefef;
+}
+.rowline:focus, .health-title:focus{
+    outline:0;
+}
+
+/**健康度管理列表 end*/
+
+/***表单样式 start*/
+.form-control:focus{
+    border-color:#ccc;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: none;
+}
+/***表单样式 end*/
+.row-wrap{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.row-line{
+    border-bottom:1px solid #efefef;
+}
+.row-wrap > div:nth-of-type(1){
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+.row-wrap > div:not(:nth-of-type(1)){
+    padding-bottom: 10px;
+}

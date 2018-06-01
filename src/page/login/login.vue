@@ -51,9 +51,8 @@
           this.goto('/list')
         });*/
 
-        vm.$axios.post('/login.json',this.user)
+        vm.$http.post('/login.json',this.user)
           .then(function (response) {
-            debugger
             // 成功后跳转到列表页面
             vm.goto('/list')
             console.log(response);

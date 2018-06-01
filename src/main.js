@@ -30,14 +30,14 @@ const router = new VueRouter(
 new Vue({
   router,
   data: {
-    alertOptions: null
   },
   components: { Alert },
   watch: {
-    alertOptions: function (newVal) {
-      this.alertOptions = newVal !== undefined ? newVal : this.alertOptions
-    }
+
   }
 }).$mount('#app')
 
-
+/*监听器demo
+alertOptions: function (newVal) {
+  this.alertOptions = newVal !== undefined ? newVal : this.alertOptions
+}*/

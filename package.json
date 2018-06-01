@@ -14,14 +14,12 @@
     "axios": "^0.18.0",
     "better-scroll": "^0.1.15",
     "fastclick": "^1.0.6",
-    "iscroll": "^5.2.0",
     "jquery": "^3.3.1",
     "showdown": "^1.6.4",
     "vee-validate": "^2.0.9",
     "vue": "^2.1.0",
     "vue-resource": "^1.5.1",
     "vue-router": "^2.1.1",
-    "vue-scroller": "^2.2.4",
     "vuex": "^2.0.0"
   },
   "devDependencies": {
@@ -67,7 +65,8 @@
     "webpack-dev-middleware": "^1.8.3",
     "webpack-dev-server": "^1.16.2",
     "webpack-hot-middleware": "^2.12.2",
-    "webpack-merge": "^0.14.1"
+    "webpack-merge": "^0.14.1",
+    "vue-scroller": "^2.2.4"
   },
   "engines": {
     "node": ">= 4.0.0",
