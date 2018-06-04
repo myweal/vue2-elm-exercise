@@ -45,16 +45,11 @@
             this.alert(temp.msg)
             return false
         }
-        /*// 向后端发送登录请求
-        this.$http.post("/login.json",this.user).then(response=>{
-          // 成功后跳转到列表页面
-          this.goto('/list')
-        });*/
-
+// 向后端发送登录请求
         vm.$http.post('/login.json',this.user)
           .then(function (response) {
             // 成功后跳转到列表页面
-            vm.goto('/list')
+            vm.goto('/betterlist')
             console.log(response);
           })
           .catch(function (error) {

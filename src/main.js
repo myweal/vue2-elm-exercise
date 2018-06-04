@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routes from './router/router'
-import Alert from 'src/components/common/Alert'
+import i18n from './language'
+import scroll from 'src/components/scroll/scroll'
 import VueScroller from 'vue-scroller'
 
 // 定义路由
@@ -17,6 +18,9 @@ require('src/config/axios-config')
 // 重新定义表单校验的字典
 require('./config/Validator')
 
+// 定义全局的scroll组件
+Vue.component("scroll",scroll)
+
 // 模拟手机端的滑动刷新
 Vue.use(VueScroller)
 
@@ -29,9 +33,10 @@ const router = new VueRouter(
 // 创建实例
 new Vue({
   router,
+  i18n,
   data: {
   },
-  components: { Alert },
+  components: {},
   watch: {
 
   }
