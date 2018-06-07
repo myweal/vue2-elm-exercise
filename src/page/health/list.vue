@@ -5,13 +5,11 @@
       <form name="healthForm" class="container mt-2"  autocomplete="off" @submit.prevent="search()" novalidate>
         <div class="form-group">
           <label for="ProName">项目名称</label>
-          <input type="text" id="ProName2" class="form-control" name="ProName" v-model="params.ProName"
-                 title="项目名称" v-validate.initial="{ regex: /^[\u4e00-\ufa5aa-zA-Z_\\d\\s]{0,40}$/ }" data-vv-as="项目名称" maxlength="40"
-                 placeholder="项目名称">
           <input type="text" id="ProName" class="form-control" name="ProName" v-model="params.ProName"
-                 title="项目名称" v-validate.initial="{ required:true , regex: /^([0-9]+)$/ }" data-vv-as="项目名称" maxlength="40"
+                 title="项目名称" v-validate.initial="{regex:/^[\u4e00-\ufa5aa-zA-Z_\\d\\s]{0,40}$/}" data-vv-as="项目名称" maxlength="40"
                  placeholder="项目名称">
         </div>
+        {{errors.items}}
         <div class="text-center btn-wrap">
           <button type="submit" class="btn btn-info col-12 btn-lg">查询</button>
         </div>
