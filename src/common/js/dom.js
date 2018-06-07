@@ -48,3 +48,17 @@ export function getRect(el) {
     }
   }
 }
+
+/**添加事件公用方法*/
+export function addEvent(obj,type,handle){
+  try{
+    obj.addEventListener(type,handle,false);
+  }catch(e){
+    try{
+      obj.attachEvent('on'+type,handle);
+    }
+    catch(e){
+      obj['on' + type]=handle;//早期浏览器
+    }
+  }
+}
