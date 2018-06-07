@@ -62,3 +62,10 @@ export function addEvent(obj,type,handle){
     }
   }
 }
+// 合并对象
+export function extend(target, source) {
+  for (var obj in source) {
+    target[obj] = source[obj];
+  }
+  return target;
+}
