@@ -27,11 +27,11 @@ Vue.component('Header',Header)
 // 模拟手机端的滑动刷新
 Vue.use(VueScroller)
 
-const router = new VueRouter(
-  {
-    routes
-  }
-)
+// 配置路由
+const router = new VueRouter({routes})
+
+// 引入自定义全局的v-submit指令
+require('src/common/directive/v-submit')
 
 // 创建实例
 new Vue({
@@ -40,9 +40,6 @@ new Vue({
   data: {
   },
   components: {},
-  watch: {
-
-  }
 }).$mount('#app')
 
 /*监听器demo
