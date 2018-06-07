@@ -5,7 +5,7 @@
       <form class="form" name="loginForm" novalidate @submit.prevent="subForm()">
         <div class="form-group">
           <label for="username">用户名</label>
-          <input id="username" name="username" title="用户名" type="text" v-validate.initial="'required|email'"
+          <input id="username" name="username" title="用户名" type="text" v-validate.initial="{required:true,email:true}"
                  class="form-control form-control-sm" v-model="user.loginid" data-vv-as="用户名" placeholder="请输入用户名"/>
         </div>
         <div class="form-group">
