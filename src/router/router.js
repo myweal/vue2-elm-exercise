@@ -9,7 +9,6 @@ const main = r => require.ensure([], () => r(require('../page/credit/main'), 'ma
 
 const health_list = r => require.ensure([], () => r(require('../page/health/list'), 'health'))
 const vue_scroll = r => require.ensure([], () => r(require('../page/health/RefreshAndInfinite'), 'health'))
-const vue_better_scroll = r => require.ensure([], () => r(require('../page/health/list_better_scroll'), 'health'))
 const health_score = r => require.ensure([], () => r(require('../page/health/score'), 'health'))
 const health_view = r => require.ensure([], () => r(require('../page/health/view'), 'health'))
 
@@ -43,8 +42,6 @@ export default [{
     {path:'/list2',
       component:vue_scroll
     },
-    {path:'/betterlist',
-    component:vue_better_scroll},
     // 健康度打分
     {path:'/score',
       component:health_score
