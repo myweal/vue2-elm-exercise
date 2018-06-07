@@ -11,7 +11,8 @@ VeeValidate.Validator.localize({
       required: function (name) { return name + '不能为空' },
       alpha_dash:function (name) { return name+"必须是字母数字下划线"},
       numeric:function (name) { return name + '必须是数字' },
-      email:function (name) { return name + '必须是正确格式的邮箱' }
+      email:function (name) { return name + '必须是正确格式的邮箱' },
+      regex:function (name) {return name+'不符合要求格式'}
     }
   }
 })

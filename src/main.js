@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import routes from './router/router'
 import i18n from './language'
 import scroll from 'src/components/scroll/scroll'
+import Header from 'src/components/common/header'
 import VueScroller from 'vue-scroller'
 
 // 定义路由
@@ -20,6 +21,8 @@ require('./config/Validator')
 
 // 定义全局的scroll组件
 Vue.component("scroll",scroll)
+// 定义全局的header
+Vue.component('Header',Header)
 
 // 模拟手机端的滑动刷新
 Vue.use(VueScroller)

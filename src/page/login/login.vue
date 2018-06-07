@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header hideFlag="true" title="登录"></Header>
-    <main class="container">
+    <main class="container mt-2">
       <form class="form" name="loginForm" novalidate @submit.prevent="subForm()">
         <div class="form-group">
           <label for="username">用户名</label>
@@ -49,7 +49,7 @@
         vm.$http.post('/login.json',this.user)
           .then(function (response) {
             // 成功后跳转到列表页面
-            vm.goto('/betterlist')
+            vm.goto('/list')
             console.log(response);
           })
           .catch(function (error) {

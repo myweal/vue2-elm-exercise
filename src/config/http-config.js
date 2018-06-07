@@ -16,7 +16,6 @@ String.prototype.endWith = function (s) {
 
 };*/
 Vue.http.interceptors.push(function (request) {
-  debugger
   // modify request
   // override before interceptor
   if (request.url.endWith('.json') || request.url.endWith('.do') || request.url.indexOf('.json?') >= 0 || request.url.indexOf('.do?') >= 0) {
