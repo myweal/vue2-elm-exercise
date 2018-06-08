@@ -34,7 +34,7 @@ axios.interceptors.response.use(function (response) {
 // 公共处理返回的数据
   if (response.data.errcode == "10000") {
     // 调用alert组件进行报错提醒
-    messageBox({"message":response.data.errmsg});
+    messageBox({"message":response.data.errmsg,"showFlag":true});
     return Promise.reject(response.data.errmsg)
   }
   // 对响应数据做点什么

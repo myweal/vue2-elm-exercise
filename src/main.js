@@ -40,6 +40,16 @@ new Vue({
   data: {
   },
   components: {},
+  methods:{
+    hideAlert(){
+      //隐藏alert
+      this.closeAlert();
+    }
+  },
+  watch: {
+    // 如果路由有变化，会再次执行该方法
+    "$route": "hideAlert"
+  }
 }).$mount('#app')
 
 /*监听器demo

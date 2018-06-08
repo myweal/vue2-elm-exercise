@@ -2,7 +2,7 @@
   <div>
     <Header hideFlag="true" title="登录"></Header>
     <main class="container mt-2">
-      <form class="form" name="loginForm" novalidate @submit.prevent="subForm()">
+      <form class="form" name="loginForm" novalidate v-submit="subForm">
         <div class="form-group">
           <label for="username">用户名</label>
           <input id="username" name="username" title="用户名" type="text" v-validate.initial="{required:true,email:true}"
@@ -36,15 +36,6 @@
     methods: {
       subForm: function () {
         let vm = this;
-        // 获得报错的集合
-        let items = this.errors.items;
-        let length = items.length;
-        // 对表单数据进行判断后报错
-        for (let i =0;i<length;i++){
-            let temp = items[i]
-            this.alert(temp.msg)
-            return false
-        }
 // 向后端发送登录请求
         vm.$http.post('/login.json',this.user)
           .then(function (response) {

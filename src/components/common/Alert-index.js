@@ -12,12 +12,6 @@ const defaults = {
 const messageVueConstructor = Vue.extend(Alert);
 messageVueConstructor.prototype.close = function () {
   var vm = this;
-  this.$on('after-leave', _ => {
-    if (vm.$el && vm.$el.parentNode) {
-      vm.$el.parentNode.removeChild(vm.$el);
-    }
-    this.$destroy();
-  });
   vm.showFlag = false;
 };
 
@@ -25,14 +19,19 @@ const messageBox = (options = {}) => {
   if (Vue.prototype.$isServer) return;
   options = Object.assign({}, defaults, options);
   let parent = document.body;
+
+  // 使用propsData传递数据，options为props配置的变量
   let instance = new messageVueConstructor({
     el: document.createElement('div'),
+    propsData: {"options":options}
+  });
+  // 使用data初始化数据
+  /*let instance = new messageVueConstructor({
+    el: document.createElement('div'),
     data: options
-  });
+  });*/
+
   parent.appendChild(instance.$el);
-  Vue.nextTick(() => {
-    instance.showFlag = true;
-  });
   return instance;
 };
 // 定义全局的公共方法

@@ -8,7 +8,8 @@ import veeValidate from 'vee-validate'
  */
 Vue.directive('submit', {
   bind:function(el,binding,vnode,oldnode){
-    addEvent(el,'submit',function () {
+    addEvent(el,'submit',function (event) {
+      event.preventDefault();
       let vm = vnode.context;
       // 获得报错的集合
       let items = vm.errors.items;

@@ -33,14 +33,31 @@ export default{
       this.showFlag = false
     }
   },
-  watch: {
+  watch:{
+    options:{
+      immediate:true,
+      handler:function(newVal,oldVal){
+        // 该回调将会在侦听开始之后被立即调用
+        if (newVal) {
+          this.title = newVal.title ? newVal.title : this.title
+          this.message = newVal.message ? newVal.message : this.message
+          this.ok = newVal.ok ? newVal.ok : this.ok
+          this.showFlag = newVal.showFlag
+        }
+      }
+
+    }
+  },
+  watch2: {
     'options': function (newVal, oldVal) {
+      // 当数据发生改变时监听
       if (newVal) {
         this.title = newVal.title ? newVal.title : this.title
         this.message = newVal.message ? newVal.message : this.message
         this.ok = newVal.ok ? newVal.ok : this.ok
-        this.showFlag = newVal.showFlag ? newVal.showFlag : this.showFlag
+        this.showFlag = newVal.showFlag
       }
+
     }
   }
 }

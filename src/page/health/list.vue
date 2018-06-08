@@ -2,7 +2,7 @@
   <div>
     <div id="healthFormId">
       <Header title="健康度管理"></Header>
-      <form name="healthForm" class="container mt-2"  autocomplete="off" @submit.prevent="search()" novalidate>
+      <form name="healthForm" class="container mt-2"  autocomplete="off" v-submit="search" novalidate>
         <div class="form-group">
           <label for="ProName">项目名称</label>
           <input type="text" id="ProName" class="form-control" name="ProName" v-model="params.ProName"
