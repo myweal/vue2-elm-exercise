@@ -2,7 +2,7 @@ import axios from 'axios'
 import Vue from "vue";
 var fn = require('src/service/desEncode')
 import messageBox from 'src/components/common/Alert-index'
-
+import vue from 'src/main'
 Vue.prototype.$http = axios;
 
 // 设置跨域标记为true
@@ -34,7 +34,12 @@ axios.interceptors.response.use(function (response) {
 // 公共处理返回的数据
   if (response.data.errcode == "10000") {
     // 调用alert组件进行报错提醒
-    messageBox({"message":response.data.errmsg,"showFlag":true});
+    messageBox({"message":response.data.errmsg,"showFlag":true,"ok":function () {
+      // 如果接口报用户未登录则调整到登录页面
+      if(response.data.errmsg==="用户未登录"){
+          vue.$router.push('/login')
+        }
+      }});
     return Promise.reject(response.data.errmsg)
   }
   // 对响应数据做点什么

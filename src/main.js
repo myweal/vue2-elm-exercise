@@ -34,7 +34,7 @@ const router = new VueRouter({routes})
 require('src/common/directive/v-submit')
 
 // 创建实例
-new Vue({
+export default new Vue({
   router,
   i18n,
   data: {
